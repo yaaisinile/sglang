@@ -24,12 +24,12 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /workspace
 
 # ===== 拉取 sglang（你可以换成你的 fork）=====
-RUN git clone https://github.com/sgl-project/sglang.git
+RUN git clone https://github.com/yaaisinile/sglang.git
 
 WORKDIR /workspace/sglang
 
 # ===== 可选：切换分支（如果你有 fork）=====
-# RUN git checkout rocm-gfx1201
+RUN git checkout rocm-gfx1201
 
 # ===== 安装 Python 依赖 =====
 RUN pip install --upgrade pip setuptools wheel
